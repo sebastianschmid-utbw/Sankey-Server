@@ -1,5 +1,2 @@
 runtime: python310
 entrypoint: uvicorn main:app --reload
-skip_files:
-- .git
-- env
