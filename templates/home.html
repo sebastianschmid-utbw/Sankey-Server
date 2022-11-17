@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<form action="/submit" method="post" class="ui form">
+  <h4 class="ui dividing header">Angaben zur Kläranlage</h4>
+    <div class="fields">
+      <div class="field">
+        <label>Name oder Ort</label>
+        <input type="text" name="name" id = "name" placeholder="Name der Kläranlage">
+      </div>
+      <div class="field">
+        <label>Ausbaugröße [EW]</label>
+        <input type="text" name="ew" id = "ew" placeholder="Ausbaugröße EW">
+      </div>
+      <div class="field">
+        <label>Abwassermenge [m<sup>3</sup>]</label>
+        <input type="text" name="flow" id = "flow" placeholder="Abwassermenge [m^3]">
+      </div>
+    </div>
+  
+  <h4 class="ui dividing header">Zulauf-Parameter</h4>
+  <div class="fields">
+    <div class="field">
+      <label>CSB [mg/L]</label>
+      <input type="text" name="csb_zu" maxlength="8" placeholder="CSB">
+    </div>
+    <div class="field">
+      <label>BSB<sub>5</sub> [mg/L]</label>
+      <input type="text" name="bsb_zu" maxlength="8" placeholder="BSB5">
+    </div>
+    <div class="field">
+      <label>TKN [mg/L]</label>
+          <input type="text" name="tkn_zu" maxlength="8" placeholder="TKN">
+    </div>
+    <div class="field">
+      <label>P [mg/L]</label>
+          <input type="text" name="p_zu" maxlength="8" placeholder="P">
+    </div>
+  </div>
+  <h4 class="ui dividing header">Ablauf-Parameter</h4>
+  <div class="fields">
+    <div class="field">
+      <label>CSB [mg/L]</label>
+      <input type="text" name="csb_ab" maxlength="8" placeholder="CSB">
+    </div>
+    <div class="field">
+      <label>BSB<sub>5</sub> [mg/L]</label>
+      <input type="text" name="bsb_ab" maxlength="8" placeholder="BSB5">
+    </div>
+    <div class="field">
+      <label>TKN [mg/L]</label>
+          <input type="text" name="tkn_ab" maxlength="8" placeholder="TKN">
+    </div>
+    <div class="field">
+      <label>P [mg/L]</label>
+          <input type="text" name="p_ab" maxlength="8" placeholder="P">
+    </div>
+  </div>
+
+  <h4 class="ui dividing header">Energiebedarf</h4>
+  <div class="fields">
+    <div class="field">
+      <label>Gas [kWh]</label>
+      <input type="text" name="gas" maxlength="8" placeholder="Gas kWh">
+    </div>
+    <div class="field">
+      <label>Strom [kWh]</label>
+      <input type="text" name="strom" maxlength="8" placeholder="Strom kWh">
+    </div>
+  </div>
+
+  <h4 class="ui dividing header">Betriebsstoffe</h4>
+  <div class="fields">
+    <div class="field">
+      <label>CO2-eq Fällmittel</label>
+      <input type="text" name="betriebsstoffe" maxlength="8" placeholder="kg CO2-eq">
+    </div>
+  </div>
+
+  <h4 class="ui dividing header">Klärschlamm</h4>
+  <div class="fields">
+    <div class="field">
+      <label>CO2-eq Transport</label>
+      <input type="text" name="transport" maxlength="8" placeholder="kg CO2-eq">
+    </div>
+    <div class="field">
+      <label>CO2-eq Entsorgung</label>
+      <input type="text" name="entsorgung" maxlength="8" placeholder="kg CO2-eq">
+    </div>
+  </div>
+  <input type="submit" value="Start">
+</form>
+  
+  <h2>Dokumentation</h2>
+{% endblock %}
